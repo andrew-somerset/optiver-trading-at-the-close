@@ -1,0 +1,19 @@
+# Python / tooling
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+
+# Kaggle competition data: rules restrict redistribution, never commit
+data/**
+!data/raw/
+!data/raw/.gitkeep
+*.zip
+*.parquet
+
+# Credentials
+.env
+kaggle.json
+access_token
