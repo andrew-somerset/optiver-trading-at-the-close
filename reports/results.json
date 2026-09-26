@@ -1,0 +1,114 @@
+{
+  "rows_with_target": 5237892,
+  "rows_total": 5237980,
+  "day_boundaries": {
+    "train": [
+      0,
+      360,
+      361
+    ],
+    "validation": [
+      361,
+      420,
+      60
+    ],
+    "holdout": [
+      421,
+      480,
+      60
+    ]
+  },
+  "validation": [
+    {
+      "model": "zero",
+      "params": {},
+      "validation_mae": 6.469101688499836
+    },
+    {
+      "model": "train median",
+      "params": {},
+      "validation_mae": 6.468583685485323
+    },
+    {
+      "model": "ridge",
+      "params": {
+        "alpha": 1.0
+      },
+      "validation_mae": 6.412374715017171
+    },
+    {
+      "model": "ridge",
+      "params": {
+        "alpha": 100.0
+      },
+      "validation_mae": 6.412369804329496
+    },
+    {
+      "model": "ridge",
+      "params": {
+        "alpha": 10000.0
+      },
+      "validation_mae": 6.41202777458253
+    },
+    {
+      "model": "boosting",
+      "params": {
+        "learning_rate": 0.05,
+        "max_iter": 300,
+        "max_leaf_nodes": 31
+      },
+      "validation_mae": 6.349059595333582
+    },
+    {
+      "model": "boosting",
+      "params": {
+        "learning_rate": 0.05,
+        "max_iter": 300,
+        "max_leaf_nodes": 127
+      },
+      "validation_mae": 6.339812251991434
+    },
+    {
+      "model": "boosting",
+      "params": {
+        "learning_rate": 0.1,
+        "max_iter": 600,
+        "max_leaf_nodes": 63
+      },
+      "validation_mae": 6.341715352850133
+    }
+  ],
+  "chosen": {
+    "ridge": {
+      "alpha": 10000.0
+    },
+    "boosting": {
+      "learning_rate": 0.05,
+      "max_iter": 300,
+      "max_leaf_nodes": 127
+    }
+  },
+  "holdout_mae": {
+    "zero": 5.8152823858254505,
+    "median": 5.815341774719147,
+    "ridge": 5.767464093006404,
+    "boosting": 5.707887427238736
+  },
+  "paired_daily": {
+    "mean_daily_gain_bps": 0.10745436099006946,
+    "se": 0.003818072926163325,
+    "days_boosting_better": 60,
+    "days": 60
+  },
+  "by_stock_gain_pct": {
+    "count": 200.0,
+    "mean": 1.8,
+    "std": 1.74,
+    "min": -1.16,
+    "25%": 0.64,
+    "50%": 1.24,
+    "75%": 2.55,
+    "max": 7.53
+  },
+  "stocks_worse_than_median": 16
+}
